@@ -1,12 +1,9 @@
-fetch("http://localhost:3000/butor")
-.then(x => x.json())
-.then(y => butor_megjelenit(y));
-
-
-fetch("http://localhost:3000/butor")
-.then(x => x.json())
-.then(y => butor_megjelenit(y));
-
+function fris(){
+    fetch("http://localhost:3000/butor")
+    .then(x => x.json())
+    .then(y => butor_megjelenit(y));
+} 
+fris()
 
 function butor_megjelenit(adatok){
     console.log(adatok);
@@ -52,7 +49,7 @@ function butor_felvitel()
     
     )
     .then(x => x.text())
-    .then(y => alert(y));
+    .then(y => {alert(y);fris()});
     
 }
 
